@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detección de Gestos en Tiempo Real</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home" id="homeButton">Home</a></li>
+            <li><a href="#Escritura">Escritura</a></li> <!-- Aquí se apunta a #escritura -->
+        </ul>
+    </nav>
+    
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <header>
+            <h1>Detección de Gestos en Tiempo Real</h1>
+        </header>
+
+        <div class="video-container">
+            <img style="display: block;margin: auto;background-color: hsl(0, 0%, 25%);border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);width: 80%;
+            max-width: 900px;" src="http://127.0.0.1:5004/video_feed" alt="Stream Video">        
+        </div>
+
+        <div class="message">
+            <p>Los gestos detectados aparecerán sobre el video en tiempo real.</p>
+            <p>Gestos disponibles: <span>"Hola"</span>, <span>"Por Favor"</span>, <span>"Cuanto"</span>, <span>"Cuesta"</span>, y <span>"Laptop"</span>.</p>
+        </div>
+    </div>
+
+    <div class="keyword-section" id="Escritura">
+        <h2>Escribe una palabra clave</h2>
+        <div class="keyword-content">
+            <!-- Área de texto a la izquierda -->
+            <textarea id="keywordInput" placeholder="Escribe 'Hola', 'Por Favor', 'Cuanto', 'Cuesta' o 'Laptop'"></textarea>
+            
+            <!-- Video a la derecha -->
+            <div class="video-player" id="videoPlayer">
+                <video id="video" autoplay style="display: none;">
+                    <source id="videoSource" src="" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
