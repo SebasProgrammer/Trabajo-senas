@@ -13,6 +13,9 @@ CORS(app)  # O el origen de tu frontend
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
+cap = cv2.VideoCapture(0)
+cap.set(3,640)
+cap.set(4,480)
 
 def mano_abierta(hand_landmarks, image_height):
     """
@@ -113,11 +116,8 @@ def detectar_laptop(hand_landmarks_list, image_width, image_height):
 # Aquí puedes incluir las demás funciones de detección
 
 def generate_frames():
-    cap = cv2.VideoCapture(0)
-    cap.set(3,640)
-    cap.set(4,480)
     with mp_hands.Hands(model_complexity=1, min_detection_confidence=0.7, min_tracking_confidence=0.7, max_num_hands=2) as hands:
-        while cap.isOpened():
+        while True:
             success, image = cap.read()
             if not success:
                 break
@@ -176,4 +176,4 @@ def video_feed():
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == "__main__":
-    app.run(port=5004,debug=True)
+    app.run(port=5005,debug=True)
