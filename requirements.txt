@@ -1,4 +1,4 @@
 Flask==3.0.0
 Flask-Cors==5.0.0
-opencv-headless
+opencv-python-headless
 mediapipe==0.10.1
