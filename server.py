@@ -6,7 +6,7 @@ import mediapipe as mp
 import math
 
 app = Flask(__name__)
-CORS(app, origins="http://127.0.0.1:5500")  # O el origen de tu frontend
+CORS(app)  # O el origen de tu frontend
 
 
 # Inicializar Mediapipe
