@@ -2,3 +2,4 @@ Flask==3.0.0
 Flask-Cors==5.0.0
 opencv-python==4.8.0.76
 mediapipe==0.10.1
+gunicorn
