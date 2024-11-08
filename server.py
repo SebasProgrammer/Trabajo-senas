@@ -13,7 +13,7 @@ CORS(app)  # O el origen de tu frontend
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 cap.set(3,640)
 cap.set(4,480)
 
