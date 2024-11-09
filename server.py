@@ -8,7 +8,7 @@ import base64
 import math
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://beautiful-granita-e95d94.netlify.app"])
 
 # Inicializar MediaPipe
 mp_hands = mp.solutions.hands
